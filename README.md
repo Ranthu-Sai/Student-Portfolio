@@ -1,4 +1,4 @@
-# Student Portfolio (JS/JSX)
+# Student Portfolio
 
 This is a React portfolio built with JavaScript/JSX. Components live under `components/`, the theme context under `contexts/`, and custom hooks under `hooks/`.
 
