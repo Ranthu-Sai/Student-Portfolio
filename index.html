@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth scroll-pt-20">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio for Sai Ranthu, a Full-Stack Developer specializing in MERN, AI, and Java. Showcasing skills, projects, and experience in building scalable web solutions." />
+    <title>Sai Ranthu | Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            animation: {
+              blob: 'blob 8s infinite',
+              'pulse-glow': 'pulse-glow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              blob: {
+                '0%': {
+                  transform: 'translate(0px, 0px) scale(1)',
+                },
+                '33%': {
+                  transform: 'translate(30px, -50px) scale(1.1)',
+                },
+                '66%': {
+                  transform: 'translate(-20px, 20px) scale(0.9)',
+                },
+                '100%': {
+                  transform: 'translate(0px, 0px) scale(1)',
+                },
+              },
+              'pulse-glow': {
+                '0%, 100%': {
+                  transform: 'scale(1)',
+                  opacity: '0.7'
+                },
+                '50%': {
+                  transform: 'scale(1.1)',
+                  opacity: '1'
+                },
+              },
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+            },
+            colors: {
+              'primary': '#00ADB5',
+              'secondary': '#393E46',
+              'light': '#EEEEEE',
+              'dark': '#222831',
+            },
+          }
+        }
+      }
+    </script>
+  
+</head>
+  <body class="bg-light text-secondary font-sans antialiased dark:bg-dark dark:text-light transition-colors duration-300">
+    <div id="root"></div>
+    <script type="module" src="/index.jsx"></script>
+</body>
+</html>

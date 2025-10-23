@@ -1,0 +1,102 @@
+/* --- Animated Gradient Border --- */
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes spin-gradient {
+  from { --angle: 0deg; }
+  to { --angle: 360deg; }
+}
+
+.animated-gradient-border-wrapper {
+  background: conic-gradient(from var(--angle), #00ADB5, #2DD4BF, #EEEEEE, #2DD4BF, #00ADB5);
+  animation: spin-gradient 3s linear infinite;
+}
+
+/* --- Card Glow Effect --- */
+.card-glow-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.card-glow-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: -4px; 
+  border-radius: inherit; /* Use the border-radius of the child */
+  z-index: -1;
+  background: conic-gradient(from var(--angle), #00ADB5, #2DD4BF, #EEEEEE, #2DD4BF, #00ADB5);
+  animation: spin-gradient 6s linear infinite;
+  filter: blur(16px);
+  /* Make it permanently but subtly visible */
+  opacity: 0.2; 
+  transition: opacity 0.3s ease-in-out;
+}
+
+html.dark .card-glow-wrapper::before {
+    opacity: 0.3; /* A bit more visible in dark mode */
+}
+
+/* On hover, intensify the glow */
+.card-glow-wrapper:hover::before {
+  opacity: 0.5;
+}
+
+html.dark .card-glow-wrapper:hover::before {
+  opacity: 0.7;
+}
+
+
+/* --- Modern, Subtle Scrollbar --- */
+      
+/* For Webkit-based browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Light Mode Styles */
+::-webkit-scrollbar-thumb {
+  background-color: #393E4690; /* semi-transparent secondary color */
+  border-radius: 20px;
+  border: 2px solid transparent; 
+  background-clip: content-box;
+  transition: background-color 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #393E46; /* secondary color */
+}
+
+/* Dark Mode Styles */
+html.dark ::-webkit-scrollbar-thumb {
+  background-color: #EEEEEE90; /* semi-transparent light color */
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background-color: #EEEEEE; /* light color */
+}
+
+
+/* For Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #393E46 transparent; /* thumb track */
+}
+html.dark {
+  scrollbar-color: #EEEEEE transparent; /* thumb track */
+}
+
+/* --- Hide Scrollbar Utility --- */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
