@@ -37,7 +37,7 @@ If you’re a student, recent grad, or anyone building a personal site, this rep
 
 ## Quick start
 
-Prerequisites: Node.js 20+ and npm
+Prerequisites: Node.js 20+ and npm (Node.js 20 LTS recommended)
 
 Install and run locally (Windows cmd):
 
@@ -133,8 +133,16 @@ git push -u origin main
 
 ### 2) Enable Pages
 
-- In GitHub: Settings → Pages → Build and deployment → Source: GitHub Actions
-- On your next push to `main`, the "Deploy to GitHub Pages" workflow will run and publish the site
+**IMPORTANT**: You must enable GitHub Pages before the workflow can deploy successfully.
+
+1. Go to your repository on GitHub
+2. Click on **Settings** (top navigation)
+3. In the left sidebar, click on **Pages**
+4. Under **Build and deployment**:
+   - Set **Source** to: **GitHub Actions**
+5. Click **Save**
+
+On your next push to `main`, the "Deploy to GitHub Pages" workflow will run and publish the site.
 
 The workflow auto-detects whether the repo is a user/org site (`<user>.github.io`, base `/`) or a project site (base `/<repo>/`). No manual `vite.config.js` changes are required.
 
@@ -142,9 +150,10 @@ The workflow auto-detects whether the repo is a user/org site (`<user>.github.io
 
 ## Troubleshooting
 
-- Assets 404 on GitHub Pages: ensure Pages is enabled via GitHub Actions, and that the workflow completed successfully.
-- Wrong asset paths on Pages: confirm the site URL is `https://<user>.github.io/<repo>/` (project site). The workflow injects the correct `--base` automatically.
-- Local dev errors: try clearing caches and reinstalling.
+- **Workflow fails with 404 error**: Ensure GitHub Pages is enabled in repository Settings → Pages → Source: GitHub Actions. The workflow cannot deploy until this is configured.
+- **Assets 404 on GitHub Pages**: Confirm the workflow completed successfully in the Actions tab, and that the site URL matches the expected format.
+- **Wrong asset paths on Pages**: Verify the site URL is `https://<user>.github.io/<repo>/` (project site). The workflow injects the correct `--base` automatically.
+- **Local dev errors**: Try clearing caches and reinstalling.
 
 ```cmd
 rd /s /q node_modules
