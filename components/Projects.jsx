@@ -37,11 +37,11 @@ const projectData = [
   {
     title: 'Portfolio Website',
     description:
-      'The very portfolio you are looking at, built to be fast, responsive, and visually appealing using modern frontend technologies.',
-    image: 'https://picsum.photos/seed/project3/500/300',
-    tags: ['React', 'TypeScript', 'Tailwind CSS'],
-    codeLink: 'https://github.com/sai-ranthu/portfolio',
-    demoLink: '#',
+      'Student Portfolio – A clean, fast, and customizable portfolio to showcase work, skills, and story. Features organized components, a simple theming system, and lightweight, responsive design.',
+    image: 'https://res.cloudinary.com/dkpi8hona/image/upload/v1761250992/Portfolio.jpg',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    codeLink: 'https://github.com/Ranthu-Sai/Student-Portfolio',
+    demoLink: 'https://ranthu-sai.github.io/Student-Portfolio',
   },
 ];
 
