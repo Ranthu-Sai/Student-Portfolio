@@ -41,7 +41,7 @@ const Header = () => {
           </a>
         </div>
         <nav className="flex-1 flex justify-center items-center min-w-0 px-2">
-          <div className="w-full overflow-x-auto no-scrollbar">
+          <div className="w-full overflow-x-auto no-scrollbar" style={{ touchAction: 'pan-x', scrollBehavior: 'smooth' }}>
             <ul className="flex items-center justify-center space-x-1 sm:space-x-2">
               <NavLink href="#about">About Me</NavLink>
               <NavLink href="#resume">My Resume</NavLink>

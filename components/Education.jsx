@@ -18,7 +18,7 @@ const educationData = [
   {
     degree: 'Secondary School Certificate (SSC)',
     institution: 'Sri Harshavardhana E.M School, Devarapalli',
-    years: 'Completed 2020',
+    years: '2019 - 2020',
     description: '',
   },
 ];

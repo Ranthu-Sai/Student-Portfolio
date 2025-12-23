@@ -22,7 +22,7 @@ const Resume = () => {
           Feel free to download my resume for a more detailed overview of my skills, experience, and projects.
         </p>
         <a
-          href="https://drive.google.com/file/d/1WKyXoViIapF63ekovJgV2dG3VMUcq-Gf/view?usp=sharing"
+          href="https://drive.google.com/file/d/1bB76UiwGChtxYVXbgUWPyW_VO3g1Proz/view?usp=sharing"
           download="Sai-Ranthu-Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
